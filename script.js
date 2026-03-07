@@ -23,7 +23,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
+            // 1. Reset the main window (for mobile/standard layouts)
             window.scrollTo(0, 0);
+
+            // 2. Reset the main content container (for desktop/sidebar layouts)
+            const mainContent = document.querySelector('.main-content');
+            if (mainContent) {
+                mainContent.scrollTop = 0;
+            }
+
+            // 3. Reset the paper stage (if that is your specific scroll container)
+            const paperStage = document.querySelector('.paper-stage');
+            if (paperStage) {
+                paperStage.scrollTop = 0;
+            }
 
             setTimeout(() => {
                 progressBar.style.width = '0%';
