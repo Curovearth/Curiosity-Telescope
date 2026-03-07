@@ -9,7 +9,7 @@ Mission CURIOSITY: On a hunt to find the Meaning!
 Inspired by Reddit astrophotography and Richard Berry’s *Build Your Own Telescope* (1985), Madhav and Swarup set out to construct a **6‑inch f/6 Newtonian reflector with a Dobsonian mount** in Bengaluru, India. The clear winter skies (Oct–Mar) made the project practical—and affordable compared with commercial scopes. Hence the name **“CURIOSITY”**.
 
 ![10th January 2026](Telescope/intro/IMG_5050.JPG)
-*Early fabrication photo – 10 Jan 2026*
+*After final assembly – 10 Jan 2026*
 
 ### Design summary
 
@@ -41,8 +41,6 @@ All CAD components are available on GrabCAD:
   - *Android*: Stellarium, Spot The Station, Sky Academy, Look4Sat, Heavens‑Above
 
 ---
-
-## Gallery
 
 ## Gallery
 
