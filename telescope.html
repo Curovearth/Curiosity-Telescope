@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>∫telescope</title>
+    <link rel="icon" type="image/x-icon" href="Telescope/2_yellowphase.ico">
+    <link rel="stylesheet" href="telescope-style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+</head>
+<body>
+    <div id="progress-container"><div id="progress-bar"></div></div>
+
+    <div class="desktop">
+        <aside class="sidebar-folder">
+            <div class="folder-tab">FILE: ∫telescope dt</div>
+            
+            <nav id="sidebar-nav">
+                <div class="nav-item active" data-target="main">00_INTRODUCTION</div>
+                <div class="nav-item" data-target="optics">01_DESIGNING</div>
+                <div class="nav-item" data-target="mechanics">03_FAB</div>
+                <div class="nav-item" data-target="testing">04_LEARNING</div>
+            </nav>
+
+            <div class="sidebar-creed">
+                <div class="creed-sanskrit">यथा पिण्डे तथा ब्रह्माण्डे, यथा ब्रह्माण्डे तथा पिण्डे</div><br>
+                <div class="creed-translit">(Yathā piṇḍe tathā brahmāṇḍe, yathā brahmāṇḍe tathā piṇḍe)</div><br>
+                <div class="creed-english">“As is the Individual, so is the Universe, as is the Universe, so is the Individual”</div>
+            </div>
+
+            <div class="sidebar-status">
+                <span class="blink">●</span> SYSTEM_READY
+            </div>
+        </aside>
+
+<!-- INTRODUCTION SECTION -->
+        <main class="paper-stage">
+            <header class="document-header">
+                <div class="confidential-seal">NOT_CLASSIFIED</div>
+                <span class="id-tag">REF: 2026-01-LOG</span>
+                <h1>6" F/6 Newtonian Reflector Telescope - CURIOSITY</h1>
+            </header>
+
+            <div id="content-area">
+                <section id="main" class="doc-section active">
+                    <div class="section-label">Mission CURIOSITY: On a hunt to find the Meaning!</div>
+                    
+                    <div class="video-grid">
+                    <div class="video-container">
+                        <div class="video-frame">
+                            <video autoplay muted loop playsinline controls id="lunar-video">
+                                <source src="Telescope/Videos/Moon-2.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                            
+                            <div class="viewfinder-overlay">
+                                <!-- <span class="rec-dot">● LIVE_FEED</span> -->
+                                <span class="zoom-level">MAG: 200x</span>
+                            </div>
+                        </div>
+                        <div class="photo-label">Observation 30-01-26 // Lunar Descent // Used: 9mm eyepiece with 2x barlow lens // Bengaluru, India</div>
+                    </div>
+                    <div class="video-container">
+                        <div class="video-frame">
+                            <video autoplay muted loop playsinline controls id="lunar-video">
+                                <source src="Telescope/Videos/Moon-1.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                            
+                            <div class="viewfinder-overlay">
+                                <!-- <span class="rec-dot">● LIVE_FEED</span> -->
+                                <span class="zoom-level">MAG: 200x</span>
+                            </div>
+                        </div>
+                        <div class="photo-label">Observation 30-01-26 // Lunar Descent // Used: 9mm eyepiece with 2x barlow lens // Bengaluru, India</div>
+                    </div>
+                    </div>
+                    
+                    <div class="photo-grid">
+
+                    <div class="photo-card">
+                        <div class="img- placeholder"> <img src="Telescope/Fab/IMG_4909.JPG" class="report-img">
+                        </div>
+                        <div class="photo-label">10th January, 2026</div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="img- placeholder"> <img src="Telescope/Fab/IMG_4966.JPG" class="report-img">
+                        </div>
+                        <div class="photo-label">15th January, 2026</div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="img- placeholder"> <img src="Telescope/intro/IMG_5050.JPG" class="report-img">
+                        </div>
+                        <div class="photo-label">23rd January, 2026</div>
+                    </div>
+
+                    <!-- SECOND ROW -->
+
+                    <div class="photo-card">
+                        <div class="img- placeholder"> <img src="Telescope/intro/01.JPG" class="report-img">
+                        </div>
+                        <div class="photo-label">25mm eyepiece // 23rd January, 2026</div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="img- placeholder"> <img src="Telescope/intro/02.jpg" class="report-img">
+                        </div>
+                        <div class="photo-label">9mm eyepiece & 2x barlow // 30th January, 2026</div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="img- placeholder"> <img src="Telescope/intro/IMG_5046.JPG" class="report-img">
+                        </div>
+                        <div class="photo-label">That's US (Madhav on the left & swarup on the right)! 23rd January, 2026</div>
+                    </div>
+
+                    <!-- THIRD ROW -->
+
+                    <div class="photo-card">
+                        <div class="img- placeholder"> <img src="Telescope/intro/04.jpg" class="report-img">
+                        </div>
+                        <div class="photo-label">25mm eyepiece & 2x barlow // 27th January, 2026</div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="img- placeholder"> <img src="Telescope/intro/03-jupiter.jpg" class="report-img">
+                        </div>
+                        <div class="photo-label">9mm eyepiece & 2x barlow // Jupiter // 13th February, 2026</div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="img- placeholder"> <img src="Telescope/fab/IMG_5237.JPG" class="report-img">
+                        </div>
+                        <div class="photo-label">Ease of carrying the telescope with bag straps</div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="img- placeholder"> <img src="Telescope/March 3, 26/phases/wb-1.jpg" class="report-img">
+                        </div>
+                        <div class="photo-label">White balance play on a full moon // 03-03-26</div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="img- placeholder"> <img src="Telescope/March 3, 26/01-Gallery view.png" class="report-img">
+                        </div>
+                        <div class="photo-label">Gallery View on the day of Lunar Eclipse // 03-03-26</div>
+                    </div>
+
+                    <div class="photo-card">
+                        <div class="img- placeholder"> <img src="Telescope/March 3, 26/phases/IMG_5659.JPG" class="report-img">
+                        </div>
+                        <div class="photo-label">Red moon</div>
+                    </div>
+
+                    <!-- FOURTH ROW -->
+
+                    <div class="photo-card span-full">
+                        <img src="Telescope/March 3, 26/phases/03-03-2026.png" class="report-img">
+                        <div class="photo-label">3rd March, 2026 // Lunar Eclipse Phases</div><br>
+                        
+                    </div>
+
+                    
+
+                    </div>
+
+                    <div class="modern-card">
+                        <h2>Chapter 00 // INTRODUCTION, the Why? Where? How?</h2>
+                        <p>Madhav on Computer M & Swarup on Computer S. <br>
+                            <br>Both, looking at their reddit feeds and getting awed by the pictures of Moon, Jupiter, Saturn, Orion Nebulae and what not, clicked by people all around the world. <br>Us discussing, HOW MUCH DOES A DECENT TELESCOPE COST? <br>
+                            <br>Well, it does cost a lot (*a lot is definitely subjective). Living in bengaluru, India where the current period of months(October to March) aids us to stargaze with the most beautiful clear skies. Something had to be done, so we jumped on searching our reddit feeds and cloudy nights to get an understanding on what people have accomplisheed, I came across this book called <a href="Telescope/Rchard Brry - Build your own Telescope (1985)(en).pdf">“Build Your Own Telescope by Richard Berry (1985)”</a>, which communicated in a very interesting way. The initial thought following the book was to build a 4" telescope but eventually we jumped onto a 6" Newtonian Reflector with Dobsonian Mount. <br>
+                            <br>Hence, the name of our telescope "CURIOSITY".
+                        </p>
+
+                        <div class="metadata-grid">
+                            <div class="meta-item"><strong>DESIGN</strong> 6" (150mm) Newtonian Reflector</div>
+                            <div class="meta-item"><strong>FOCAL LENGTH</strong> 900mm</div>
+                            <div class="meta-item"><strong>PRIMARY MIRROR</strong> Ø 150mm</div>
+                            <div class="meta-item"><strong>SECONDARY MIRROR</strong> Ø 28mm - minor axis & Ø 38mm - major axis</div>
+                            <div class="meta-item"><strong>EYEPIECE</strong> 25mm, 9mm & Barlow Lens</div>
+                        </div>                         
+                        
+                    </div>
+
+                   
+
+                    </div>
+                    
+                </section>
+
+<!-- DESIGNING SECTION -->
+
+                <section id="optics" class="doc-section">
+                    <div class="section-label">02 // DIMENSIONS & CALCULATIONS & DESIGNING</div>
+                    <div class="modern-card">
+                        <h2>Chapter 01-A // Dimensions & Calculations</h2>
+                        <p>The image shown below is the most essential and the easiest calculation that one has to look for while building a newtonian reflector telescope.</p>
+                        
+                        <div class="img-container">
+                            <img src="Telescope/Design/04-Optical Layout cal.png" class="report-img" alt="Optical Layout Calculations">
+                            <div class="photo-label">FIG 1.1: Optical Layout and the necessary calculation to make your life easy.<br> Ref: How to build your own telescope by Richard berry</div>
+                        </div>
+                        <p>In our case, for the distance between the diagonal mirror and the primary mirror, we did not strictly adhere to the <strong>+1"</strong>, rather we subtracted it i.e., our final equation looked like <strong>F-T-H-1"</strong>.
+                        This was done because of the focuser size. The calculation looks like 
+                        <ul>
+                            <li>F = Focal Length = 900mm</li>
+                            <li>T = Tube inner dia = 95mm</li>
+                            <li>H = Height of focuser = 96mm</li>
+                            <li>So, F-T-H-25 = 900 - 95 - 96 - 25 = 684mm</li>
+                        </ul>
+                        <p><span style="color: red"><strong>Q.</strong> Why did we go for a 190mm inner diameter of tube?</span><br>
+                        <strong>A.</strong> After referring a lot of sources over the internet and also during the assembly process of the telescope, it is advised to maintain an offset of ≥ 20mm from the size of primary mirror i.e., for a 6" or 150mm primary mirror size, 150 + (2*20) = 190mm should be the minimum inner diameter of your PVC tube.</p>
+
+                        <strong>>> Our initial procurement of parts looked like</strong>
+                        <ul>
+                            <li>PVC Tube dimension: Ø190mm as inner diameter and Ø200mm as outer diameter with a length of 1000mm.</li>
+                            <li><a href="https://www.tejraj.com/product/6-newtonian-telescope-making-optical-kit">6" Newtonian Telescope kit</a> purchased from Tejraj and co. who provide a <strong>6" primary mirror</strong>, <strong>25mm eyepiece</strong>, a <strong>diagonal mirror</strong> as was mentioned in the previous chapter and finally a <strong>Rack-n-pinion focuser</strong>.</li>
+                            <li>Matte Black Spray paints which we got it from a nearby hardware store.</li>
+                        </ul>
+                        </p>
+
+                        <h2>Chapter 01-B // CAD Modelling & Designing</h2>
+                        <p>The following images are snippets of our design from Fusion 360 software which supports student licences, though some limitations, but does fulfill our job.</p>
+                        
+                        <div class="model-viewport">
+                            <model-viewer 
+                                src="Telescope/Curiosity_6inch_Telescope.gltf" 
+                                alt="3D CAD Model of Curiosity_6inch_Telescope" 
+                                auto-rotate 
+                                camera-controls 
+                                camera-orbit="0deg 180deg 100%"
+                                shadow-intensity="0" 
+                                stage-light-intensity="5" 
+                                environment-intensity="8"
+                                exposure="0.4">
+                                <div class="blueprint-label" slot="poster">INITIALIZING 3D RENDER...</div>
+                            </model-viewer>
+                            
+                        <div class="photo-label">Interactive // Curiosity_6inch_Telescope.gltf</div>
+                        </div>
+                        <p>Use the cursor to move it around and scroll to zoom in and zoom out.</p>
+                        
+                        <p>
+                            >> <strong>01_PRIMARY MIRROR ASSEMBLY</strong>
+                        <div class="photo-grid">
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Design/05-a-Primary Mirror-Full view.png">
+                                </div>
+                                <div class="photo-label">Isometric top view</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Design/05-b-Primary Mirror-bottom.png">
+                                </div>
+                                <div class="photo-label">Isometric bottom view</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Design/05-c-Primary Mirror-insert.png">
+                                </div>
+                                <div class="photo-label">Insert for 3D printed component in blue</div>
+                            </div>
+                        </div>
+                        </p>
+                        <p> Based on the images represented above:
+                            <ul>
+                                <li>Back of the mirror is adhered with adhesive velcro hook and the pink component (housing) is adhered with velcro loop.</li>
+                                <li>The face of the blue components in contact with the mirror is adhered with a 2mm thick rubber padding to hold the mirror in position.</li>
+                                <li>Excluding the green component which is plywood, all the other components are 3D printed.</li>
+                                <li>CAD Link: <a href="https://grabcad.com/library/curiosity-6-newtonian-reflector-dobsonian-telescope-1">GRABCAD - Curiosity</a> </li>
+                            </ul>
+                        </p>
+
+                        <p>
+                            >> <strong>02_SECONDARY MIRROR with SPIDER VANE ASSEMBLY</strong>
+                        <div class="photo-grid">
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Design/06-a-Secondary Mirror-Full view.png">
+                                </div>
+                                <div class="photo-label">Isometric top view</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Design/06-b-Secondary Mirror-bottom.png">
+                                </div>
+                                <div class="photo-label">Isometric bottom view</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Design/06-c-Secondary Mirror-labels.png">
+                                </div>
+                                <div class="photo-label">Labelling</div>
+                            </div>
+                        </div>
+                        </p>
+                        <p> Based on the images represented above:
+                            <ul>
+                                <li>The green component represents COTS (commercially off the shelf) 0.7mm thick scale/ruler of 30cm length which we got from a stationary store. For spider vane designs, follow the below links for better understanding. To take a note of "Diffraction Spikes"</li>
+                                    <ul>
+                                        <li><a href="https://carlin.udjat.nl/spider/spider2.html">>></a> Some thoughts about spiders in Newtonian telescopes by Nils Olof Carlin</li>
+                                        <li><a href="https://www.cloudynights.com/forums/topic/495707-spider-and-secondary-diffraction-what-to-do-what-to-avoid/">>></a> Cloudy Nights: Spider and Secondary Diffraction: what to do, what to avoid</li>
+                                        <li><a href="https://www.findlight.net/blog/diffraction-spikes/">>></a> Findlight blog: Diffraction Spikes from Telescope Secondary Mirror Spiders</li>
+                                    </ul>
+                                <li>The secondary mirror is adhered to the top yellow bracket (groove supported for ease of positioning) using standard strong adhesive. To ensure wearing gloves while handling the mirrors.</li>
+                                <li>Make sure to clean the mirrors using a standard alcohol based wipes.</li>
+                                <li>CAD Link: <a href="https://grabcad.com/library/curiosity-6-newtonian-reflector-dobsonian-telescope-1">GRABCAD - Curiosity</a></li>
+                            </ul>
+                        </p>
+
+                        <p>
+                            >> <strong>03_OPTICAL TUBE ASSEMBLY (OTA)</strong>
+                        <div class="photo-grid">
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Design/07-a-OTA-Full view.png">
+                                </div>
+                                <div class="photo-label">Isometric Front view</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Design/07-b-OTA-Section View.png">
+                                </div>
+                                <div class="photo-label">Section View</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Design/07-c-OTA-only pipe.png">
+                                </div>
+                                <div class="photo-label">PVC Optical Tube</div>
+                            </div>
+                        </div>
+                        </p>
+                        <p> Based on the images represented above:
+                            <ul>
+                                <li>The OTA is a PVC tube purcahsed from a hardware store of dimensions</li>
+                                    <ul>
+                                        <li>Height or Length: 1000mm</li>
+                                        <li>Outer Diameter: 200mm</li>
+                                        <li>Inner Diameter: 190mm</li>
+                                    </ul>
+                                <li>The holes positioning were hand drilled based on the calculations that was done above.</li>
+                                <li>Collimation can be done later, ensure all the brackets are fastened properly and the length of fastener should not exceed the 20mm offset i.e., 20mm space between mirror and the inner diameter of the tube.</li>
+                                <li>CAD Link: <a href="https://grabcad.com/library/curiosity-6-newtonian-reflector-dobsonian-telescope-1">GRABCAD - Curiosity</a> </li>
+                            </ul>
+                        </p>
+
+                        <p>
+                            >> <strong>04_OTA CRADLE</strong>
+                        <div class="photo-grid">
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Design/08-a-OTA cradle-full view.png">
+                                </div>
+                                <div class="photo-label">Isometric view</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Design/08-b-OTA cradle-section view.png">
+                                </div>
+                                <div class="photo-label">Section View</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Design/08-c-OTA cradle-sliding bkt assembly.png">
+                                </div>
+                                <div class="photo-label">Wooden Insert Guide and Alignment</div>
+                            </div>
+                        </div>
+                        </p>
+                        <p> Based on the images represented above:
+                            <ul>
+                                <li>We were heavily inspired by <a href="https://stellafane.org/tm/dob/mount/rockerbox.html">>></a> Stellafane's Guide</li>
+                                <li>Complete OTA Cradle is made with plywood cutout and held together with</li>
+                                    <ul>
+                                        <li>Firstly with Aluminium profile L brackets.</li>
+                                        <li>Secondly all the mating surfaces were connected with self tapping screws for wood.</li>
+                                        <li>To ensure the entire cradle is sturdy with supports.</li>
+                                    </ul>
+                                <li>CAD Link: <a href="https://grabcad.com/library/curiosity-6-newtonian-reflector-dobsonian-telescope-1">GRABCAD - Curiosity</a> </li>
+                            </ul>
+                        </p>
+
+                        <p>
+                            >> <strong>05_ROCKER BOX</strong>
+                        <div class="photo-grid">
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Design/09-a-Rocker Box-Full view.png">
+                                </div>
+                                <div class="photo-label">Isometric view</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Design/09-b-Rocker Box-Teflon.png">
+                                </div>
+                                <div class="photo-label">Teflon Spacers</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Design/09-c-Rocker Box-Base.png">
+                                </div>
+                                <div class="photo-label">Rocker Box Base view</div>
+                            </div>
+                        </div>
+                        </p>
+                        <p> Based on the images represented above:
+                            <ul>
+                                <li>We were heavily inspired by <a href="https://stellafane.org/tm/dob/mount/rockerbox.html">>></a> Stellafane's Guide but gave our own touch to the overall design.</li>
+                                <li>Complete Rocker box is made with plywood cutouts held together with L brackets at multiple locations.</li>
+                                <li>For smooth rotation, the base body and the upper body can be connected with </li>
+                                    <ul>
+                                        <li>Compact disk</li>
+                                        <li>Roller bearings</li>
+                                        <li>Teflon spacers sliding over each other, but ensure as shown in the second image about a mistake that we did using a very small teflon disc which led to imbalance issues. The red regions have been marked to highlight supports that need to be ensured.</li>
+                                        <li>Our initial attempt incorporated using a teflon tape which was adhered to both the bodies but we wanted better smoothness in terms of rotation.</li>
+                                    </ul>
+                                <li>The two bodies should be then clamped with a fastener.</li>
+                                <li>CAD Link: <a href="https://grabcad.com/library/curiosity-6-newtonian-reflector-dobsonian-telescope-1">GRABCAD - Curiosity</a> </li>
+                            </ul>
+                        </p>
+
+                        <p>
+                            >> <strong>06-FINAL TELESCOPE ASSEMBLY</strong>
+                        <div class="photo-grid">
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Design/01-a.png">
+                                </div>
+                                
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Design/01-b.png">
+                                </div> 
+                            
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Design/03-section view.png">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        </p>
+                        <p> 
+                            <ul>
+                                <li>CAD Link: <a href="https://grabcad.com/library/curiosity-6-newtonian-reflector-dobsonian-telescope-1">GRABCAD - Curiosity</a> </li>
+                            </ul>
+                        </p>
+
+                        
+
+                </section>
+
+<!-- FABRICATION AND ASSEMBLY -->
+
+                <section id="mechanics" class="doc-section">
+                    <div class="section-label">03 // MECHANICAL FABRICATION & ASSEMBLY</div>
+                    <div class="modern-card">
+                        <h2>To get the assembly party started. From design to fabrication!</h2>
+                        <p>We were lucky enough to have access to a really big wooden router at our lab's facility. To make our life easier and pace up the process, we decided to utilize the capability of the wooden router for contour cuts of our desired profiles for telescope components.</p>
+                        
+                        <p>
+                            
+                        <div class="photo-grid">
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4781.JPG">
+                                </div>
+                                <div class="photo-label">Profile cuts from wooden router</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4905.JPG">
+                                </div>
+                                <div class="photo-label">Matte Black spray paint job to PVC pipe with drilled holes for focuser and mounting brackets of primary and secondary bracket</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4906.JPG">
+                                </div>
+                                <div class="photo-label">Matte Black spray paint to be done inside as well</div>
+                            </div>
+
+                            <!-- SECOND ROW -->
+
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4808.JPG">
+                                </div>
+                                <div class="photo-label">Due to excess paint at the inner face of the tube, placing the primary bkt inside required to cut the border to fit inside the tube</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4811.JPG">
+                                </div>
+                                <div class="photo-label">Adhesive velcro loop pasted to the 3D printed Primary Mirror Bkt</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4812.JPG">
+                                </div>
+                                <div class="photo-label">Rubber padding adhered to the 3D printed primary bkt clamps</div>
+                            </div>
+
+                        <!-- THIRD ROW -->
+
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4813.JPG">
+                                </div>
+                                <div class="photo-label">Matte black spray paint job to the primary bkt</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4814.JPG">
+                                </div>
+                                <div class="photo-label">Matte black spray paint job to the clamping bkt. Masking tape pasted to the rubber pads to avoid paint sticking to the rubber padding.</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4815.JPG">
+                                </div>
+                                <div class="photo-label">3D printed bkt for fastening primary bkt assembly to the PVC tube with an addition of handle</div>
+                            </div>
+                        
+
+                        <!-- FOURTH ROW -->
+
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4816.JPG">
+                                </div>
+                                <div class="photo-label">Ease of handling of the bracket is ensured by the handle</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4817.JPG">
+                                </div>
+                                <div class="photo-label">Back view of the previous image</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4818.JPG">
+                                </div>
+                                <div class="photo-label">Matte Black spray paint job. "I AM BATMAN"</div>
+                            </div>
+
+                        <!-- FIFTH ROW -->
+
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4819.JPG">
+                                </div>
+                                <div class="photo-label">Aluminium profile L Brackets highlighting the local protrusions coming out</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4820.JPG">
+                                </div>
+                                <div class="photo-label">The L brackets were faced using cutting tool and was given a smooth finish to ensure it flushes well with the wooden surface</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4821.JPG">
+                                </div>
+                                <div class="photo-label">A big shoutout to the assembly table where as you can see we just placed everything. Looked really pretty</div>
+                            </div>
+
+                        <!-- SIXTH ROW -->
+
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4907.JPG">
+                                </div>
+                                <div class="photo-label">Scale ruler had drilled holes for the Seondary mirror assembly. This acts as the spider vane</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4909.JPG">
+                                </div>
+                                <div class="photo-label">Initial assembly of rocker box with the cradle to have a feel how it will look like</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4941.JPG">
+                                </div>
+                                <div class="photo-label">Assembly of OTA cradle with rubber padding on the clamp brackets</div>
+                            </div>
+
+                        <!-- SEVENTH ROW -->
+
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4942.JPG">
+                                </div>
+                                <div class="photo-label">Top view of the OTA cradle highlights the rubber padding and L brackets</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4955.JPG">
+                                </div>
+                                <div class="photo-label">Printouts of stopper bracket pasted on the plywood and then shaped using Electric Drill Saw</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4956.JPG">
+                                </div>
+                                <div class="photo-label">OTA cradle up & down moving bkt</div>
+                            </div>
+
+                        <!-- EIGHTH ROW -->
+
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4957.JPG">
+                                </div>
+                                <div class="photo-label">Wooden M8 insert</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4962.JPG">
+                                </div>
+                                <div class="photo-label">Insert an M8 fastener from the opposite side and using a spanner just start tightening</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4963.JPG">
+                                </div>
+                                <div class="photo-label">The wooden insert will tighten by itself to the wood</div>
+                            </div>
+
+                        <!-- NINTH ROW -->
+
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4966.JPG">
+                                </div>
+                                <div class="photo-label">Assembled view with the Indian flag</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4967.JPG">
+                                </div>
+                                <div class="photo-label">Rubber padding adhered with double sided tape</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4968.JPG">
+                                </div>
+                                <div class="photo-label">Up and down clamping bracket inside the OTA cradle box</div>
+                            </div>
+
+                        <!-- TENTH ROW -->
+
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4976.JPG">
+                                </div>
+                                <div class="photo-label">Ensure to put a center hole on the 3D printed primary bkt while simultaneously making a center mark in the primary mirror back and to match both of them while sticking</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4978.JPG">
+                                </div>
+                                <div class="photo-label">That's me(left) and Madhav(right) assembling the primary bracket</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4983.JPG">
+                                </div>
+                                <div class="photo-label">This image was one of the most interesting one's that we captured where we assembled the secondary mirror and primary mirror. We tried to use a laser light to look at the light's path</div>
+                            </div>
+
+                        <!-- ELEVENTH ROW -->
+
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4993.JPG">
+                                </div>
+                                <div class="photo-label">COLLIMATION: Take an exact printout of primary mirror with a center mark and using a red marker, mark a red point to the center of the mirror</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4994.JPG">
+                                </div>
+                                <div class="photo-label">Spring loaded primary bracket assembly for ease of calibration and collimation</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4995.JPG">
+                                </div>
+                                <div class="photo-label">Red point at the center of the primary mirror. Ensure to clean the mirror with IPA first</div>
+                            </div>
+
+                        <!-- TWELFTH ROW -->
+
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4996.JPG">
+                                </div>
+                                <div class="photo-label">Similarly, do the same activity for the secondary mirror but make a green marked point at the center</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_4997.JPG">
+                                </div>
+                                <div class="photo-label">The up & down bracket inside OTA cradle is adhered with a metal plate which will butt against the pushing screw. This was done to avoid any deformation to the wooden surface</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_5001.JPG">
+                                </div>
+                                <div class="photo-label">Rocker box assembly</div>
+                            </div>
+
+                        <!-- THIRTEENTH ROW -->
+
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_5002.JPG">
+                                </div>
+                                <div class="photo-label">Black spray paint job on the rocker box assembly</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_5006.JPG">
+                                </div>
+                                <div class="photo-label">Madhav cutting circular teflon tooltec for azimuth bearing</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_5007.JPG">
+                                </div>
+                                <div class="photo-label">As can be seen, both the bodies are adhered with teflon tooltec since these bodies are flushing against each other</div>
+                            </div>
+
+                        <!-- FOURTEENTH ROW -->
+
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_5236.JPG">
+                                </div>
+                                <div class="photo-label">Bag straps were added for ease of handling and movment</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_5235.JPG">
+                                </div>
+                                <div class="photo-label">Madhav observing Jupiter</div>
+                            </div>
+                            <div class="photo-card">
+                                <div class="img- placeholder">
+                                    <img src="Telescope/Fab/IMG_5237.JPG">
+                                </div>
+                                <div class="photo-label">This is how we carry the entire telescope assembly right now</div>
+                            </div>
+                        
+                        </p>
+                        
+                        
+                    </div>
+                </section>
+
+<!-- TESTING -->            
+                
+                <section id="testing" class="doc-section">
+                    <div class="section-label">04 // HELP ME UNDERSTAND</div>
+                    <div class="modern-card">
+                        <h2>What is this? Why is this? How is this?</h2>
+                        <p>This section highlights all the information that we came across to deepen our understanding pre-during and post assembly of the telescope. The aim is to put up information that will be helpful as and when we get to learn about something new. Happy Learning!</p>
+                        
+                        <div class="toc-box">
+                            <div class="toc-title">DOCUMENT_INDEX // CLICK_TO_JUMP</div>
+                            <ul id="help-toc"></ul>
+                        </div>
+
+                        <h3>>> How do I learn the sky?</h3>
+                        <p>
+                            <div class="photo-grid">
+                                <div class="photo-card">
+                                    <div class="img- placeholder"> <img src="https://c02.purpledshub.com/uploads/sites/48/2018/11/planisphere-f7da7ff.jpg?webp=1&w=1200" class="report-img">
+                                    </div>
+                                    <div class="photo-label">A planisphere is an astronomical tool that can help you navigate the night sky</div>
+                                </div>
+
+                                <div class="photo-card">
+                                    <div class="img- placeholder"> <img src="https://kehillanw.org/img/articles/item_211_default-stars__q-90.jpg" class="report-img">
+                                    </div>
+                                    <div class="photo-label">Stellarium App - one of the best online free planetarium</div>
+                                </div>
+
+                                <div class="photo-card">
+                                    <div class="img- placeholder"> <img src="https://play-lh.googleusercontent.com/zsPc4nNL2XlqX0a8CRh7pmqLdcYuN3GdgZTA2uLvTVrww4AJeuzyG1-5Aqdmk34Mdg=w2560-h1440-rw" class="report-img">
+                                    </div>
+                                    <div class="photo-label">NASA, Spot the station app for IOS and Android</div>
+                                </div>
+                            </div>
+                            <ol>
+                                <li>Richard Berry in his book suggests, the best way to learn is via <a href="https://www.skyatnightmagazine.com/advice/skills/how-to-use-a-planisphere">PLANISPHERE</a>, wherein you can dial in the date and time and it will show you the sky at that instant.</li>
+                                <li>Following is a list of applications for IOS and Android that we came across, which should help you in navigating the skies</li>
+                                    <ul>
+                                        <li>IOS</li>
+                                        <ol>
+                                            <li><a href="https://apps.apple.com/us/app/stellarium-mobile-star-map/id1458716890">Stellarium</a></li>
+                                            <li><a href="https://apps.apple.com/us/app/sky-guide/id576588894">SkyGuide</a> - notifies you about any transits and also the best objects to look at the sky based on your location</li>
+                                            <li><a href="https://apps.apple.com/us/app/sky-academy-learn-astronomy/id1571488252">Sky Academy</a> - for learning the constellations in the night sky</li>
+                                        </ol>
+                                        <li>Android</li>
+                                        <ol>
+                                            <li><a href="https://play.google.com/store/apps/details?id=com.noctuasoftware.stellarium_free&hl=en_IN&pli=1">Stellarium</a></li>
+                                            <li><a href="https://play.google.com/store/apps/details?id=gov.nasa.hq.SpotTheStation&hl=en_IN">Spot the Station</a> - notifies you about the ISS transit from your location</li>
+                                            <li><a href="https://play.google.com/store/apps/details?id=digital.dong.skyacademy&hl=en_IN">Sky Academy</a> - for learning the constellations in the night sky</li>
+                                            <li><a href="https://play.google.com/store/apps/details?id=com.rtbishop.look4sat&hl=en_IN">Look4Sat</a> - for tracking the satellites - best for amateur radio astronomers</li>
+                                            <li><a href="https://play.google.com/store/apps/details?id=com.heavens_above.viewer&hl=en_IN">Heavons-Above</a> - for tracking the satellites - best for amateur radio astronomers</li>
+                                        </ol>
+                                    </ul>
+                            </ol>
+                        </p>
+
+                        <h3>>> What is Light Gathering Power (LGP)?</h3>
+                        <p> The property of an optical system that tells you how much brighter things will appera than what the human eye can see.
+                            <p>The Light Gathering Power is defined as: $$LGP = \frac{D^2}{d^2}$$</p>
+                            <p>In our case, our primary mirror has a diameter of 150mm and considering if the average human eye lens has a diameter of 6mm in darkness, how much more light will the mirror gather than the human eye?</p>
+                            <p>Answer: $$LGP = \frac{150^2}{6^2} = 625$$ so 625 times more light. The telescope has much larger aperturer than the eye and allows more light which means even stars too faint to be detected by the eye can easily be brightened by the telescope so that they are easy to detect and study.</p>
+                            <p>
+                                <ol>
+                                    <li>Bright stars in the sky: FIRST MAGNITUDE</li>
+                                    <li>Faintest visible to naked eye: SIXTH MAGNITUDE</li>
+                                    <li>For a 6" telescope having 625 LGP, it reaches stars of magnitude 13.5</li>
+                                    <li>The "Aperture - Diameter of lens or mirror" of the telescope is the most important factor, larger the aperture, more powerful is the telescope.</li>
+                                </ol>
+                            </p>
+                            <div class="photo-grid">
+                                <div class="photo-card">
+                                    <div class="img- placeholder"> <img src="Telescope/Learning/IMG_5616.JPG" class="report-img">
+                                    </div>
+                                    <div class="photo-label">Working of Newtonian Reflecting Telescope vs Cassegran Reflecting Telescope</div>
+                                </div>
+
+                                <div class="photo-card">
+                                    <div class="img- placeholder"> <img src="Telescope/Learning/IMG_5617.JPG" class="report-img">
+                                    </div>
+                                    <div class="photo-label">Short Notes on Refracting Telescope</div>
+                                </div>
+
+                                <div class="photo-card">
+                                    <div class="img- placeholder"> <img src="Telescope/Learning/IMG_5615.JPG" class="report-img">
+                                    </div>
+                                    <div class="photo-label">Short Notes on Catadioptric Telescope with a touch on focal ratio</div>
+                                </div>
+                            </div>
+                        </p>
+
+                        <h3>>> What is Focal Ratio & Magnification of a telescope?</h3>
+                        <p>
+                            $$FocalRatio = \frac{Focal Length}{Aperture} = \frac{900mm}{150mm} = 6$$
+                        </p>
+                        <p>A focal ratio of 6 is an f/6 mirror</p>
+                        <p>
+                            $$Magnification = \frac{FocalLengthTelescope}{FocalLengthEyepiece}$$
+                        </p>
+                        <p>For a 25mm eyepiece</p>
+                        <p>
+                            $$Magnification = \frac{900mm}{25mm} = 36$$
+                        </p>
+                        <p>For a 9mm eyepiece</p>
+                        <p>
+                            $$Magnification = \frac{900mm}{9mm} = 100$$
+                        </p>
+                        <p>
+                            <ul>
+                                <li>Area of sky visible through an eyepiece = FIELD OF VIEW</li>
+                                <li>Area of sky covered is = REAL FIELD OF VIEW</li>
+                                <li>Angle you see when you look into the eyepiece = APPARENT FIELD OF VIEW</li>
+                            </ul>
+                        </p>
+
+                        <h3>>> What is Diffraction & Airy Disk ?</h3>
+                        <div class="photo-grid">
+                                <!-- <div class="photo-card">
+                                    <div class="img- placeholder"> <img src="Telescope/Learning/IMG_5616.JPG" class="report-img">
+                                    </div>
+                                    <div class="photo-label">Working of Newtonian Reflecting Telescope vs Cassegran Reflecting Telescope</div>
+                                </div> -->
+
+                                <div class="photo-card">
+                                    <div class="img- placeholder"> <img src="https://avantierinc.com/wp-content/uploads/2024/08/Diffraction-limit-2-768x402.png" class="report-img">
+                                    </div>
+                                    <div class="photo-label">Airy disk is a diffraction pattern</div>
+                                </div>
+
+                                <!-- <div class="photo-card">
+                                    <div class="img- placeholder"> <img src="Telescope/Learning/IMG_5615.JPG" class="report-img">
+                                    </div>
+                                    <div class="photo-label">Short Notes on Catadioptric Telescope with a touch on focal ratio</div>
+                                </div> -->
+                            </div>
+                        <p><strong>Diffraction:</strong> Bending of light near the edges of an obstacle similar to how water spreads out into waves when an obstruction is present in front of it. More on diffraction in telescope can be found <a href="http://spiff.rit.edu/classes/phys312/workshops/w10c/telescopes/telescopes.html">>></a> Diffraction in Astronomy</p>
+                        <p><strong>Airy Disk:</strong> A very bright, circular spot of light formed in the center of image which together with the series of concentric rings around is called Airy Pattern.</p>
+                        <p>To deep dive more ...</p>
+                    
+                        <h3>>> What is Dobsonian Mount & Equatorial Mount?</h3>
+                        <p><strong>Dobsonian Mount</strong></p>
+                        <p>The first classic mount for any budding amateur astronomer that only requires screws, glue, plywood and that's it.</p>
+                        <p>The name coming from a renowned amateur astronomer <a href="https://en.wikipedia.org/wiki/John_Dobson_(amateur_astronomer)">"John Dobson"</a> is best known for promoting awareness regarding astronomy to the common people and thus guiding everyone with low cost & quick mount newtonian reflector telescope.</p>
+                        <p><a href="https://www.youtube.com/watch?v=snz7JJlSZvw&t=5065s&pp=ygUeam9obiBkb2Jzb24gdGVsZXNjb3BlIGJ1aWxkaW5n">>></a> Telescope Building with John Dobson, a must watch video series on building a dobsonian mount.</p>
+                    
+                        <p><strong>Equatorial Mount</strong></p>
+                        <p>When you don't want to move your telescope manually, you opt for an equatorial mount which is designed to follow the track the movement of the objects in the night sky. Comparing with a dobsonian mount, equatorial mount offers more sturdy and expensive mount.</p>
+                        <p>The motorized tracking of equatorial mount whose axis align with the earth's rotational axis. The electronics involved gives the opportunity to the user to play around with the overall navigation of the deep sky objects. </p>
+                    
+                        <div class="photo-grid">
+                                <div class="photo-card">
+                                    <div class="img- placeholder"> <img src="https://www.cloudynights.com/uploads/monthly_08_2012/post-42532-14073910120285_thumb.jpg" class="report-img">
+                                    </div>
+                                    <div class="photo-label">Dobsonian Mount on Cloudy nights</div>
+                                </div>
+
+                                <div class="photo-card">
+                                    <div class="img- placeholder"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Equatorial_mount.svg/500px-Equatorial_mount.svg.png" class="report-img">
+                                    </div>
+                                    <div class="photo-label">Principle of operation for equatorial mount</div>
+                                </div>
+
+                                <div class="photo-card">
+                                    <div class="img- placeholder"> <img src="https://c02.purpledshub.com/uploads/sites/48/2023/01/difference-altaz-equatorial-mount-a32e204.jpg?fit=1024,800&webp=1&w=1200" class="report-img">
+                                    </div>
+                                    <div class="photo-label">Altaz Mount vs Equatorial Mount</div>
+                                </div>
+                            </div>
+
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+    <script src="telescope-script.js"></script>
+    <div id="image-overlay" class="overlay">
+    <span class="close-overlay">&times;</span>
+    <img class="overlay-content" id="zoomed-image">
+    <div id="overlay-caption"></div>
+</div>
+</body>
+</html>
