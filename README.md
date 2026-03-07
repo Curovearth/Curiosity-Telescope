@@ -8,7 +8,7 @@ derived from the shloka || यथा पिण्डे तथा ब्रह�
 Mission CURIOSITY: On a hunt to find the Meaning!  
 Inspired by Reddit astrophotography and Richard Berry’s *Build Your Own Telescope* (1985), Madhav and Swarup set out to construct a **6‑inch f/6 Newtonian reflector with a Dobsonian mount** in Bengaluru, India. The clear winter skies (Oct–Mar) made the project practical—and affordable compared with commercial scopes. Hence the name **“CURIOSITY”**.
 
-![10th January 2026](Telescope/intro/IMG_5050.JPG)
+<img src="Telescope/intro/IMG_5050.JPG" width="300" alt="Fabrication">
 *After final assembly – 10 Jan 2026*
 
 ### Design summary
@@ -47,19 +47,19 @@ All CAD components are available on GrabCAD:
 <div align="center">
 <table>
 <tr>
-<td><img src="Telescope/Fab/IMG_4909.JPG" width="200" alt="Fabrication"></td>
+<td><img src="Telescope/intro/04.jpg" width="200" alt="Fabrication"></td>
 <td><img src="Telescope/intro/01.JPG" width="200" alt="25 mm eyepiece"></td>
 <td><img src="Telescope/intro/02.jpg" width="200" alt="9 mm eyepiece + Barlow"></td>
 </tr>
 <tr>
 <td><img src="Telescope/intro/04.jpg" width="200" alt="Eyepiece & Barlow"></td>
+<td><img src="Telescope/March 3, 26/phases/wb-1.jpg" width="200" alt="Jupiter"></td>
 <td><img src="Telescope/intro/03-jupiter.jpg" width="200" alt="Jupiter"></td>
-<td><img src="Telescope/fab/IMG_5237.JPG" width="200" alt="Carrying case"></td>
 </tr>
 <tr>
-<td><img src="Telescope/March 3, 26/phases/IMG_5659.JPG" width="200" alt="Red moon"></td>
-<td><img src="Telescope/March 3, 26/phases/wb-1.jpg" width="200" alt="White balance on full moon"></td>
-<td><img src="Telescope/March 3, 26/phases/03-03-2026.png" width="200" alt="Eclipse phases"></td>
+<td><img src="Telescope/March 3, 26/phases/edits/1_redphase.jpg" width="200" alt="Red moon"></td>
+<td><img src="Telescope/March 3, 26/phases/edits/2_yellowphase.jpg" width="200" alt="Yellow moon"></td>
+<td><img src="Telescope/March 3, 26/phases/edits/3_whitephase.jpg" width="200" alt="Full moon"></td>
 </tr>
 </table>
 </div>
