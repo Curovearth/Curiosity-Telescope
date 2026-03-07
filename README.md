@@ -53,13 +53,13 @@ All CAD components are available on GrabCAD:
 </tr>
 <tr>
 <td><img src="Telescope/intro/04.jpg" width="200" alt="Eyepiece & Barlow"></td>
-<td><img src="Telescope/March 3, 26/phases/wb-1.jpg" width="200" alt="Jupiter"></td>
+<td><img src="Telescope/March-3-26/phases/wb-1.jpg" width="200" alt="Jupiter"></td>
 <td><img src="Telescope/intro/03-jupiter.jpg" width="200" alt="Jupiter"></td>
 </tr>
 <tr>
-<td><img src="Telescope/March 3, 26/phases/edits/1_redphase.jpg" width="200" alt="Red moon"></td>
-<td><img src="Telescope/March 3, 26/phases/edits/2_yellowphase.jpg" width="200" alt="Yellow moon"></td>
-<td><img src="Telescope/March 3, 26/phases/edits/3_whitephase.jpg" width="200" alt="Full moon"></td>
+<td><img src="Telescope/March-3-26/phases/edits/1_redphase.jpg" width="200" alt="Red moon"></td>
+<td><img src="Telescope/March-3-26/phases/edits/2_yellowphase.jpg" width="200" alt="Yellow moon"></td>
+<td><img src="Telescope/March-3-26/phases/edits/3_whitephase.jpg" width="200" alt="Full moon"></td>
 </tr>
 </table>
 </div>
