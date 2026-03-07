@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
+            window.scrollTo(0, 0);
+
             setTimeout(() => {
                 progressBar.style.width = '0%';
                 // Refresh gallery list whenever we switch chapters
